@@ -34,7 +34,7 @@ public class SchoolController {
     public ResponseEntity<List<TeachingClassDto>> listClasses(){
 
         return restTemplate
-                .exchange("http://"+ serviceHost +"/class", HttpMethod.GET, null,
+                .exchange("http://school-service/class", HttpMethod.GET, null,
                         new ParameterizedTypeReference<List<TeachingClassDto>>() {});
     }
 }
